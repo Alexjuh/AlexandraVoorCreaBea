@@ -4,29 +4,44 @@ $brightBlue: #0061ff;
 $darkBlue: #001f51;
 
 *{ margin:0; padding:0; box-sizing:border-box;
+  .container{display:table; width:100%;}
+  .container:after{clear:both;}
   .wrapper{overflow-y:scroll; overflow-x: hidden; height:100vh;
     h1{text-align:center;}
     h2{color:#fff; padding:10px 0; font-family: 'Gloria Hallelujah', cursive; text-decoration:underline;}
     p{text-align:center;}
-    .outer_header{height:auto;
+    .row:after{clear:both;}
+    .outer_header{height:auto; overflow:hidden;
       .inner_header{background-color:$cyaan; height:100%; padding:25px;
 
       } //end inner_header
     } //end outer_header
-    .outer_content{height:100%;
+    .outer_content{height:auto; overflow:hidden;
       .inner_content{padding:25px;
-        .today{padding:5px; margin:5px 0; border-radius:5px; text-align:center;
-          background: #001f51;
-          background: -moz-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
-          background: -o-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
-          background: -webkit-linear-gradient(left $darkBlue 1%, $lightBlue 100%); background: -ms-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
-          background: linear-gradient(to right, $darkBlue 0%, $lightBlue 100%);}
-        .today:hover{  background: #001f51;
-          background: -moz-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
-          background: -o-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
-          background: -webkit-linear-gradient(left $lightBlue 1%, $darkBlue 100%); background: -ms-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
-          background: linear-gradient(to right, $lightBlue 1%, $darkBlue 100%);}
-        .table_data{width:100%;
+        .days{height:420px; border-radius:5px; text-align:center;
+          // background: #001f51;
+          // background: -moz-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
+          // background: -o-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
+          // background: -webkit-linear-gradient(left $darkBlue 1%, $lightBlue 100%); background: -ms-linear-gradient(left $darkBlue 1%, $lightBlue 100%);
+          // background: linear-gradient(to right, $darkBlue 0%, $lightBlue 100%);
+          ul{height:100%;
+            li{height:14.28%; list-style:none; padding:5%; border-top-left-radius:5px; border-bottom-left-radius:5px; border:1px solid black;
+              a{color:black; text-decoration:none;}
+            }
+            .ma{background-color:yellow;}
+            .di{background-color:orange;}
+            .wo{background-color:blue;}
+            .do{background-color:red;}
+            .vr{background-color:green;}
+            .za, .zo{background-color:brown;}
+          } //end ul
+        } //end days
+          // .days:hover{  background: #001f51;
+          // background: -moz-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
+          // background: -o-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
+          // background: -webkit-linear-gradient(left $lightBlue 1%, $darkBlue 100%); background: -ms-linear-gradient(left $lightBlue 1%, $darkBlue 100%);
+          // background: linear-gradient(to right, $lightBlue 1%, $darkBlue 100%);}
+        .table_data{
           table{ border-collapse:collapse; border-spacing:0; width:100%;
             th{border:1px solid black; padding:5px; background-color:$cyaan; color:#fff;
             }
@@ -41,7 +56,7 @@ $darkBlue: #001f51;
         } //end button
       } //end inner_content
     } //end outer_content
-    .outer_footer{height:100px; width:100%; position:absolute; bottom:0;
+    .outer_footer{height:100px; width:100%; position:absolute; bottom:0; overflow:hidden;
       .inner_footer{background-color:$cyaan;  height:100%;
         p{padding-top:25px; text-align:center;}
       } //end inner_footer

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="wrapper">
+  <div class="wrapper container">
 
     <div class="outer_header row">
       <div class="inner_header col-md-12 cl-sm-12">
@@ -24,9 +24,19 @@
     </div>
 
     <div class="outer_content row">
-      <div class="inner_content col-md-6 col-md-offset-3 col-md-onset-3 col-sm-12">
-        <div class="today"><h2>Vandaag te doen</h2></div>
-        <div class="table_data">
+      <div class="inner_content col-md-8 col-md-offset-2 col-sm-12">
+        <div class="days col-md-3">
+          <ul>
+            <li class="ma"><a href="#">Maandag</a></li>
+            <li class="di"><a href="#">Dinsdag</a></li>
+            <li class="wo"><a href="#">Woensdag</a></li>
+            <li class="do"><a href="#">Donderdag</a></li>
+            <li class="vr"><a href="#">Vrijdag</a></li>
+            <li class="za"><a href="#">Zaterdag</a></li>
+            <li class="zo"><a href="#">Zondag</a></li>
+          </ul>
+        </div>
+        <div class="table_data col-md-offset-3">
           <?php
           $result = dataFromBase($conn);
           if($result !== NULL){
