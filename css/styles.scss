@@ -16,7 +16,7 @@ $darkBlue: #001f51;
 
       } //end inner_header
     } //end outer_header
-    .outer_content{height:auto; overflow:hidden;
+    .outer_content{height:auto; overflow:hidden; margin-bottom:100px;
       .inner_content{padding:25px;
         .days{height:420px; border-radius:5px; text-align:center;
           // background: #001f51;
@@ -34,6 +34,7 @@ $darkBlue: #001f51;
             .do{background-color:red;}
             .vr{background-color:green;}
             .za, .zo{background-color:brown;}
+            .active, .ma:hover, .di:hover, .wo:hover, .do:hover, .vr:hover, .za:hover, .zo:hover{width:110%; margin-left:-10%;}
           } //end ul
         } //end days
           // .days:hover{  background: #001f51;
@@ -56,7 +57,7 @@ $darkBlue: #001f51;
         } //end button
       } //end inner_content
     } //end outer_content
-    .outer_footer{height:100px; width:100%; position:absolute; bottom:0; overflow:hidden;
+    .outer_footer{height:100px; width:100%; position:fixed; bottom:0; overflow:hidden;
       .inner_footer{background-color:$cyaan;  height:100%;
         p{padding-top:25px; text-align:center;}
       } //end inner_footer

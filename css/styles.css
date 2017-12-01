@@ -31,7 +31,8 @@
         padding: 25px; }
     * .wrapper .outer_content {
       height: auto;
-      overflow: hidden; }
+      overflow: hidden;
+      margin-bottom: 100px; }
       * .wrapper .outer_content .inner_content {
         padding: 25px; }
         * .wrapper .outer_content .inner_content .days {
@@ -62,6 +63,9 @@
               background-color: green; }
             * .wrapper .outer_content .inner_content .days ul .za, * .wrapper .outer_content .inner_content .days ul .zo {
               background-color: brown; }
+            * .wrapper .outer_content .inner_content .days ul .active, * .wrapper .outer_content .inner_content .days ul .ma:hover, * .wrapper .outer_content .inner_content .days ul .di:hover, * .wrapper .outer_content .inner_content .days ul .wo:hover, * .wrapper .outer_content .inner_content .days ul .do:hover, * .wrapper .outer_content .inner_content .days ul .vr:hover, * .wrapper .outer_content .inner_content .days ul .za:hover, * .wrapper .outer_content .inner_content .days ul .zo:hover {
+              width: 110%;
+              margin-left: -10%; }
         * .wrapper .outer_content .inner_content .table_data table {
           border-collapse: collapse;
           border-spacing: 0;
@@ -87,7 +91,7 @@
     * .wrapper .outer_footer {
       height: 100px;
       width: 100%;
-      position: absolute;
+      position: fixed;
       bottom: 0;
       overflow: hidden; }
       * .wrapper .outer_footer .inner_footer {

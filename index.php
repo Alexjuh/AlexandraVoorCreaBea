@@ -27,41 +27,25 @@
       <div class="inner_content col-md-8 col-md-offset-2 col-sm-12">
         <div class="days col-md-3">
           <ul>
-            <li class="ma"><a href="#">Maandag</a></li>
-            <li class="di"><a href="#">Dinsdag</a></li>
-            <li class="wo"><a href="#">Woensdag</a></li>
-            <li class="do"><a href="#">Donderdag</a></li>
-            <li class="vr"><a href="#">Vrijdag</a></li>
-            <li class="za"><a href="#">Zaterdag</a></li>
-            <li class="zo"><a href="#">Zondag</a></li>
+            <li class="ma"><a href="?link=maa">Maandag</a></li>
+            <li class="di"><a href="?link=din">Dinsdag</a></li>
+            <li class="wo"><a href="?link=woe">Woensdag</a></li>
+            <li class="do"><a href="?link=don">Donderdag</a></li>
+            <li class="vr"><a href="?link=vrij">Vrijdag</a></li>
+            <li class="za"><a href="?link=zat">Zaterdag</a></li>
+            <li class="zo"><a href="?link=zon">Zondag</a></li>
           </ul>
         </div>
         <div class="table_data col-md-offset-3">
           <?php
-          $result = dataFromBase($conn);
-          if($result !== NULL){
-            ?>
-            <table>
-              <tr>
-                <th class="item">Taak</th>
-                <th class="item">Startijd</th>
-                <th class="item">Eindtijd</th>
-                <th class="item">Gedaan?</th>
-              </tr>
-            <?php
-            while($row = $result->fetch(PDO::FETCH_ASSOC)){
-              //hier data vullen met html
-              //var_dump($result);
-              echo
-              '<tr><td class="item">'. $row["item_list"]. '</td>'.
-              '<td>'. $row["start_time"]. '</td>'.
-              '<td>'. $row["end_time"]. '</td>'.
-              '<td><input type="checkbox" name="check" value="Done" class="checkbox" data-id="'.$row["item_id"].'" '.($row["done"] ? "checked" : '').' ></td></tr>';
-              //'. $row["done"].'
-            }
-            ?>
-          </table>
-        <?php } ?>
+            if(isset($_GET['link'])){
+              $link=$_GET['link'];
+              if ($link == 'woe'){
+                include 'woensdag.php';
+              } elseif ($link !== 'woe'){
+                include 'empty.php';
+              }
+            } ?>
         </div>
         <button class="add_new">Nieuwe taak</button>
       </div>
